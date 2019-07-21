@@ -27,7 +27,7 @@ from tensorflow.keras import layers
 start_size = 10  # How large to start snake
 rando = False  # If to use model(false) or rand data to gen train data
 file_name = 'TrainData.csv'  # Name of file to save training data
-model_name = 'full_game.h5'  # Name of file that has the tf model
+model_name = 'full_game_1.h5'  # Name of file that has the tf model
 model_input_size = 5  # Full game = 5, survive only = 4
 max_deaths = 10000  # Number of deaths for AI to take
 clock_speed = 10  # Clock speed
@@ -254,7 +254,7 @@ class Game:
           self.outputToFile(file_name)
       else:
         self.results = -1
-        self.outputToFile(debug_file)
+        #self.outputToFile(debug_file)
         if rand:
           self.outputToFile(file_name)
         return
